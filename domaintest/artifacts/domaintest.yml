@@ -1,0 +1,5 @@
+artifacts:
+  domaintest:
+    type: whl
+    build: uv build
+    path: ..

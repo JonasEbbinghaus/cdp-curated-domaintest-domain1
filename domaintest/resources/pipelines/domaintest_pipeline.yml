@@ -1,0 +1,8 @@
+resources:
+  pipelines:
+    domaintest_pipeline:
+      name: domaintest_pipeline
+      target: domaintest_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../../src/dlt_pipeline.ipynb
