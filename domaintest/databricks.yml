@@ -1,0 +1,20 @@
+bundle:
+  name: domaintest
+
+include:
+  - artifacts/*.yml
+  - resources/jobs/*.yml
+  - resources/pipelines/*.yml
+  - targets/*.yml
+  - variables/*.yml
+
+targets:
+  dev:
+    workspace: https://adb-4280611164646789.9.azuredatabricks.net
+    catalog: cdp-dev-curated-domaintest-test-jonas
+    external_location: abfss://loc-dev-curated-domaintest-test-jonas@stcdphubcurateddev.dfs.core.windows.net/
+
+  prod:
+    workspace: https://adb-1232603156744818.18.azuredatabricks.net
+    catalog: cdp-prod-curated-domaintest-test-jonas
+    external_location: abfss://loc-prod-curated-domaintest-test-jonas@stcdphubcuratedprod.dfs.core.windows.net/
